@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <style>
+            body{
+                padding-left: 22%;
+            }
+            video{
+                display: block;
+                width: 300px;
+                align-items: center;
+            }
+        </style>
+    </head>
+<body>
+    <h1>Video event with Form</h1>
+    <br>
+    <video controls oncanplay="dothat()">
+        <source src="Sample.mp4"  type="video/mp4">
+    </video>
+    <br>
+    <p id="msg"></p>
+    <br>
+    <input type="name" required placeholder="text" id="name"></input>
+    <br>
+    <button type="submit" onclick="dothis()">submit</button>
+    <script>
+        function dothis()
+        {
+            let p = document.getElementById("name").value;
+            if (p.length==0)
+            {
+                alert("fill the name");
+            }
+            else{
+                alert("your name is "+p);
+            }
+        }
+        function dothat()
+        {
+            document.getElementById("msg").innerHTML="video ready to view";
+        }
+        </script>
+        </body>
+        </html>

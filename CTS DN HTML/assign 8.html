@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>User Preferences</title>
+
+    <style>
+        body{
+            font-family: Arial;
+            background: rgb(164, 78, 78);
+            text-align: center;
+        }
+
+        .box{
+            width: 300px;
+            background: white;
+            padding: 20px;
+            border-radius: 10px;
+        }
+
+        select, button{
+            width: 100%;
+            padding: 10px;
+            margin-top: 10px;
+        }
+
+        button{
+            background: rgb(136, 75, 5);
+            color: white;
+            border: none;
+        }
+    </style>
+</head>
+
+<body>
+
+<div class="box">
+
+    <h2>Event Preference</h2>
+
+    <select id="event" onchange="savePrefer()">
+
+        <option value="">Select Event</option>
+
+        <option value="Workshop">Workshop</option>
+
+        <option value="Concert">symposium</option>
+
+        <option value="Conference">Conference</option>
+
+    </select>
+
+    <button onclick="clearData()">
+        Clear Preferences
+    </button>
+
+</div>
+
+<script>
+
+window.onload = function(){
+
+    let savedEvent =
+    localStorage.getItem("eventType");
+
+    if(savedEvent){
+
+        document.getElementById("event").value =
+        savedEvent;
+    }
+}
+
+function savePrefer(){
+
+    let event =
+    document.getElementById("event").value;
+
+    localStorage.setItem("eventType", event);
+
+    sessionStorage.setItem("eventType", event);
+}
+
+function clearData(){
+
+    localStorage.clear();
+
+    sessionStorage.clear();
+
+    alert("Preferences Cleared");
+}
+
+</script>
+
+</body>
+</html>

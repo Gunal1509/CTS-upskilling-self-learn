@@ -1,0 +1,111 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Event Feedback</title>
+
+    <style>
+        body{
+            font-family: Arial;
+            background: lightblue;
+        }
+
+        .box{
+            width: 300px;
+            background: white;
+            padding: 20px;
+            margin: auto;
+            border-radius: 10px;
+        }
+
+        input, select, textarea{
+            width: 100%;
+            padding: 8px;
+            margin-bottom: 10px;
+        }
+
+        button{
+            background: green;
+            color: white;
+            padding: 8px;
+            border: none;
+        }
+
+        img{
+            width: 150px;
+        }
+    </style>
+</head>
+
+<body>
+
+<h2 align="center">Event Feedback</h2>
+
+<div class="box">
+
+    <input type="text"
+           id="phone"
+           placeholder="Phone Number"
+           onblur="checkPhone()">
+
+    <select id="event" onchange="showFee()">
+        <option>Select Event</option>
+        <option value="200">Workshop</option>
+        <option value="500">Concert</option>
+    </select>
+
+    <p id="fee"></p>
+
+    <textarea id="feedback"
+              placeholder="Enter Feedback"
+              onkeyup="countChar()"></textarea>
+
+    <p>Characters: <span id="count">0</span></p>
+
+    <br><br>
+
+    <button onclick="showAlert()">Submit</button>
+
+</div>
+
+<script>
+
+function checkPhone(){
+
+    let p = document.getElementById("phone").value;
+
+    if(p.length != 10){
+        alert("Enter 10 digit phone number");
+    }
+}
+
+function showFee(){
+
+    let fee = document.getElementById("event").value;
+
+    document.getElementById("fee").innerHTML =
+    "Event Fee: ₹" + fee;
+}
+
+function showAlert(){
+
+    alert("Feedback Submitted");
+}
+
+function bigImage(img){
+
+    img.style.width = "300px";
+}
+
+function countChar(){
+
+    let text =
+    document.getElementById("feedback").value;
+
+    document.getElementById("count").innerHTML =
+    text.length;
+}
+
+</script>
+
+</body>
+</html>
