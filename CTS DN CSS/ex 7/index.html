@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Table Styling ex 7</title>
+
+    <style>
+
+        table{
+            width: 70%;
+            border-collapse: collapse;
+            margin: 20px auto;
+            text-align: center;
+        }
+
+        th{
+            border: 1px solid black;
+            padding: 10px;
+            background-color: lightblue;
+        }
+
+        td{
+            border: 1px solid black;
+            padding: 10px;
+        }
+
+        tr:nth-child(even){
+            background-color: lightgray;
+        }
+
+    </style>
+</head>
+
+<body>
+
+    <h2 align="center">Event Schedule</h2>
+
+    <table>
+
+        <tr>
+            <th>Event</th>
+            <th>Date</th>
+            <th>Venue</th>
+        </tr>
+
+        <tr>
+            <td>Music Show</td>
+            <td>10 Aug</td>
+            <td>Town Hall</td>
+        </tr>
+
+        <tr>
+            <td>Workshop</td>
+            <td>15 Aug</td>
+            <td>Community Center</td>
+        </tr>
+
+        <tr>
+            <td>Sports Meet</td>
+            <td>20 Aug</td>
+            <td>City Stadium</td>
+        </tr>
+
+    </table>
+
+</body>
+</html>

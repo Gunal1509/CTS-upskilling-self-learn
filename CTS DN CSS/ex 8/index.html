@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Box Model & Layout Control ex8</title>
+
+    <style>
+
+        .eventCard{
+            border: 2px solid blue;
+            padding: 20px;
+            margin: 20px;
+            background-color: lightgray;
+        }
+
+        input:focus{
+            outline: 3px solid red;
+        }
+
+        .hiddenBox{
+            visibility: hidden;
+        }
+
+        .noneBox{
+            display: none;
+        }
+
+    </style>
+</head>
+
+<body>
+
+    <div class="eventCard">
+        <h3>Music Show</h3>
+        <p>Date: 10 August</p>
+    </div>
+
+    <h3>Form Field</h3>
+
+    <input type="text" placeholder="Enter Name">
+
+
+    <div class="hiddenBox">
+        This box is hidden but space remains.
+    </div>
+
+    <div class="noneBox">
+        This box is completely removed.
+    </div>
+
+</body>
+</html>

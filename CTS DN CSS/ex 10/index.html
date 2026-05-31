@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Responsive Web Design</title>
+
+    <style>
+
+        body{
+            margin: 0;
+            font-family: Arial;
+        }
+
+        /* Navigation */
+
+        .nav{
+            display: flex;
+            background-color: blue;
+            padding: 10px;
+        }
+
+        .nav a{
+            color: white;
+            text-decoration: none;
+            margin-right: 20px;
+        }
+
+        /* Content */
+
+        .container{
+            width: 80%;
+            margin: auto;
+        }
+
+        img{
+            width: 30vw;
+            height: auto;
+        }
+
+        h1{
+            font-size: 3vw;
+        }
+
+        p{
+            font-size: 1.5vw;
+        }
+
+        /* Media Query */
+
+        @media screen and (max-width:768px){
+
+            .nav{
+                flex-direction: column;
+            }
+
+            img{
+                width: 60vw;
+            }
+
+            h1{
+                font-size: 6vw;
+            }
+
+            p{
+                font-size: 4vw;
+            }
+        }
+
+    </style>
+</head>
+
+<body>
+
+    <div class="nav">
+        <a href="#">Home</a>
+        <a href="#">Events</a>
+        <a href="#">Contact</a>
+    </div>
+
+    <div class="container">
+
+        <h1>Local Community Event Portal</h1>
+
+        <img src="culture 5 (1).jpg" alt="Event">
+
+        <p>
+            Welcome to our community event portal.
+        </p>
+
+    </div>
+
+</body>
+</html>

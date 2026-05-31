@@ -1,0 +1,15 @@
+
+.heading{
+    color: blue;
+    text-align: center;
+}
+.content{
+    font-size: 18px;
+    color: black;
+}
+.btn{
+    background-color: green;
+    color: white;
+    padding: 10px;
+    border: none;
+}

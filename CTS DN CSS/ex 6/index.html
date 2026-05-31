@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Link and List Styling</title>
+
+    <style>
+        
+        a:link{
+            color: blue;
+            text-decoration: none;
+        }
+
+        a:hover{
+            color: red;
+        }
+
+        a:active{
+            color: green;
+        }
+
+        a:visited{
+            color: purple;
+        }
+
+        .nav{
+            list-style-type: none;
+        }
+
+        .nav li{
+            display: inline;
+            margin: 10px;
+            padding: 5px;
+        }
+
+        .events{
+            list-style-type: square;
+            list-style-position: inside;
+        }
+        .events li{
+            margin: 8px;
+            padding: 5px;
+        }
+
+    </style>
+</head>
+
+<body>
+
+    <h2>Navigation Menu</h2>
+
+    <ul class="nav">
+        <li><a href="https://www.google.com">Home</a></li>
+        <li><a href="#">Events</a></li>
+        <li><a href="#">Contact</a></li>
+    </ul>
+
+    <h2>Upcoming Events</h2>
+
+    <ul class="events">
+        <li>Music Show</li>
+        <li>Workshop</li>
+        <li>Sports Meet</li>
+    </ul>
+
+</body>
+</html>
