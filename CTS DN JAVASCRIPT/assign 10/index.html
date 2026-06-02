@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Modern JS Events</title>
+
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/css/bootstrap.min.css"
+          rel="stylesheet">
+
+    <script defer src="main.js"></script>
+</head>
+
+<body class="bg-light">
+
+<div class="container mt-4">
+
+    <h1 class="text-center text-primary">
+        Community Events
+    </h1>
+
+    <!-- Add Event -->
+    <div class="card p-4 mt-4 shadow">
+
+        <h4>Add Event</h4>
+
+        <input type="text" id="name"
+               class="form-control mb-2"
+               placeholder="Event Name">
+
+        <input type="text" id="category"
+               class="form-control mb-2"
+               placeholder="Category">
+
+        <input type="number" id="seats"
+               class="form-control mb-2"
+               placeholder="Seats">
+
+        <button class="btn btn-primary"
+                onclick="addEventFromUI()">
+            Add Event
+        </button>
+
+    </div>
+
+    <!-- Filter -->
+    <div class="card p-4 mt-4 shadow">
+
+        <h4>Filter Available Events</h4>
+
+        <button class="btn btn-success"
+                onclick="showAvailableEvents()">
+            Show Available (Seats > 0)
+        </button>
+
+        <button class="btn btn-secondary"
+                onclick="showAllEvents()">
+            Show All
+        </button>
+
+    </div>
+
+    <!-- Display -->
+    <div id="eventContainer" class="mt-4"></div>
+
+</div>
+
+</body>
+</html>
